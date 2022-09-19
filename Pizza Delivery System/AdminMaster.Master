@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="Pizza_Delivery_System.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <title></title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		
+    <link rel="stylesheet" href="bootstrap/css/w3.css">
+
+	<script src="bootstrap/js/jquery.min.js"></script>
+	
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    <nav class="navbar" style="border-radius:0px;">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+              </button>
+              <a class="navbar-brand" href="#">Admin Panel</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="AdminDashboard.aspx">Dashboard</a></li>
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pizza
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="AdminAddPizza.aspx">Add Pizza</a></li>
+                  <li><a href="AdminViewPizza.aspx">View Pizza</a></li>
+                </ul>
+                </li>
+
+               <!-- <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pizza Category
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="AdminAddCategory.aspx">Add Category</a></li>
+                  <li><a href="AdminViewCategory.aspx">View Category</a></li>
+                </ul>
+                </li>-->
+
+              <li><a href="AdminViewFeedback.aspx">View Feedback</a></li>
+
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Setting
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="AdminChangePassword.aspx">Change Password</a></li> 
+                </ul>
+                </li>
+
+                <li><a href="Logout.aspx">Log out</a></li>
+               
+              </ul>          
+            </div>
+          </div>
+        </nav>
+
+
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
